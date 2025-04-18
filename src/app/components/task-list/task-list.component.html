@@ -43,7 +43,9 @@
   <!-- Remarks Column -->
   <ng-container matColumnDef="remarks">
     <th mat-header-cell *matHeaderCellDef> Remarks </th>
-    <td mat-cell *matCellDef="let element"> {{ element.remarks }} </td>
+    <td mat-cell *matCellDef="let element" class="remarks-cell"> 
+      {{ element.remarks }} 
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

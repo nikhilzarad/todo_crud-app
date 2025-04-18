@@ -4,6 +4,13 @@
 .add-button {
   margin: 8px;
 }
+.remarks-cell {
+  white-space: pre-wrap; /* Preserves whitespace and wraps text */
+  word-wrap: break-word; /* Breaks long words to fit within the cell */
+  word-break: break-word; /* Ensures long words break properly */
+  overflow-wrap: break-word; /* Adds support for modern browsers */
+  max-width: 100%; /* Ensures the cell doesn't exceed the device width */
+}
 
 .add-task-container {
   display: flex;
@@ -43,19 +50,41 @@
   background-color: #f9f9f9;
 }
 
-/* Default table styles */
+/* General table styles */
 table {
-  width: 100%;
-  /* Ensure the table takes full width */
-  border-collapse: collapse;
-  /* Remove gaps between table cells */
-  margin-bottom: 16px;
-  /* Add spacing below the table */
+  width: 100%; /* Ensure the table takes full width */
+  border-collapse: collapse; /* Remove gaps between table cells */
+  margin-bottom: 16px; /* Add spacing below the table */
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+  // display: block; /* Allow the table to scroll horizontally */
 }
 
+/* Table header styles */
 th {
-  font-size: 23px;
-  padding: 6px;
+  font-size: 16px;
+  padding: 8px;
+  text-align: left;
+  background-color: #f4f4f4; /* Light background for headers */
+  color: #333; /* Dark text color */
+  white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+/* Table cell styles */
+td {
+  font-size: 14px;
+  padding: 8px;
+  word-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word; /* Adds support for modern browsers */
+}
+
+/* Remarks column specific styles */
+.remarks-cell {
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+  word-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word; /* Adds support for modern browsers */
+  max-width: 300px; /* Set a maximum width for the cell */
 }
 
 mat-paginator {
@@ -81,8 +110,13 @@ mat-paginator {
   }
 
   table {
+    font-size: 14px; /* Reduce font size for smaller screens */
     margin-bottom: 12px;
     /* Reduce spacing below the table */
+  }
+
+  th, td {
+    padding: 6px; /* Reduce padding */
   }
 
   th {
@@ -109,6 +143,10 @@ mat-paginator {
   mat-paginator {
     margin-top: 20px;
   }
+
+  .remarks-cell {
+    max-width: 90%; /* Adjust max width for tablets */
+  }
 }
 
 /* Responsive styles for devices with width 425px */
@@ -129,7 +167,12 @@ mat-paginator {
   }
 
   table {
+    font-size: 12px; /* Further reduce font size */
     margin-bottom: 12px;
+  }
+
+  th, td {
+    padding: 4px; /* Further reduce padding */
   }
 
   th {
@@ -145,6 +188,10 @@ mat-paginator {
 
   mat-paginator {
     margin-top: 20px;
+  }
+
+  .remarks-cell {
+    max-width: 80%; /* Adjust max width for small devices */
   }
 }
 
@@ -212,7 +259,12 @@ mat-paginator {
 
   /* Table */
   table {
+    font-size: 10px; /* Reduce font size for very small screens */
     margin-bottom: 12px;
+  }
+
+  th, td {
+    padding: 2px; /* Minimize padding */
   }
 
   th {
@@ -233,5 +285,9 @@ mat-paginator {
     margin-top: 16px;
     /* Adjust spacing above the paginator */
 
+  }
+
+  .remarks-cell {
+    max-width: 70%; /* Adjust max width for very small devices */
   }
 }

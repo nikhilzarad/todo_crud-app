@@ -9,7 +9,7 @@ mat-raised-button {
 mat-toolbar {
   background: rgba(135, 207, 235, 0.851);
   color: white;
-  min-height: 64px; /* Default height for larger screens */
+  // min-height: 64px; /* Default height for larger screens */
   width: 100%; /* Ensure full width for all devices */
 }
 
@@ -33,7 +33,7 @@ mat-toolbar-row {
 /* Responsive styles for tablets */
 @media (max-width: 768px) {
   mat-toolbar {
-    min-height: 56px; /* Reduce toolbar height */
+    // min-height: 56px; /* Reduce toolbar height */
   }
 
   .bruno-ace-sc-bold {
@@ -54,7 +54,7 @@ mat-toolbar-row {
 /* Responsive styles for devices with width 425px */
 @media (max-width: 425px) {
   mat-toolbar {
-    min-height: 50px; /* Reduce toolbar height */
+    // min-height: 50px; /* Reduce toolbar height */
   }
 
   .bruno-ace-sc-bold {
@@ -75,7 +75,7 @@ mat-toolbar-row {
 /* Responsive styles for devices with width 375px */
 @media (max-width: 376px) {
   mat-toolbar {
-    min-height: 48px; /* Further reduce toolbar height */
+    // min-height: 48px; /* Further reduce toolbar height */
   }
 
   .bruno-ace-sc-bold {
@@ -96,7 +96,7 @@ mat-toolbar-row {
 /* Responsive styles for devices with width 320px */
 @media (max-width: 320px) {
   mat-toolbar {
-    min-height: 44px; /* Further reduce toolbar height */
+    // min-height: 44px; /* Further reduce toolbar height */
   }
 
   .bruno-ace-sc-bold {
