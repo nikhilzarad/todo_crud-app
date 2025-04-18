@@ -28,7 +28,9 @@ export class TaskListComponent {
   }
 
   onEdit(task: Task): void {
-    const dialogRef = this.dialog.open(AddTaskComponent);
+    const dialogRef = this.dialog.open(AddTaskComponent, {
+      data: task, // Pass the task to the dialog
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
